@@ -34,5 +34,10 @@ public class UserService {
         return userRepository.findById(id);
     }
 
+    // Method to get a users by priority
+    public ArrayList<UserModel> getUsersByPriority(Integer priority) {
+        return (ArrayList<UserModel>) userRepository.findByPriority(priority);
+    }
+
 }
 
