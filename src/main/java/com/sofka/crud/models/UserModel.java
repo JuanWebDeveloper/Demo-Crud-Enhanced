@@ -51,11 +51,14 @@ public class UserModel {
     // Link between user and user_rol entities
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "user", cascade = CascadeType.REMOVE, targetEntity = UserRoleModel.class)
     @JsonManagedReference
-    private List<UserRoleModel> UserRoleModel;
+    private List<UserRoleModel> userRole;
 
     public UserModel(String name, String email, Integer priority) {
         this.name = name;
         this.email = email;
         this.priority = priority;
+    }
+
+    public UserModel() {
     }
 }

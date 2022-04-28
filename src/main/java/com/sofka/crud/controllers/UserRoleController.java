@@ -8,8 +8,9 @@ import com.sofka.crud.services.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
-@RequestMapping("/user/role")
+@RequestMapping("/role")
 public class UserRoleController {
     @Autowired
     UserRoleService userRoleService;
@@ -18,5 +19,11 @@ public class UserRoleController {
     @GetMapping()
     public ArrayList<UserRoleModel> getAllRoles() {
         return userRoleService.getAllRoles();
+    }
+
+    // Method to save a new role
+    @PostMapping()
+    public UserRoleModel saveRole(@RequestBody UserRoleModel userRole) {
+        return userRoleService.saveRole(userRole);
     }
 }

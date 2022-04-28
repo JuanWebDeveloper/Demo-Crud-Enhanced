@@ -10,7 +10,7 @@ public class UserRoleModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
-    private String rol;
+    private String role;
 
     public Long getId() {
         return id;
@@ -20,22 +20,25 @@ public class UserRoleModel {
         this.id = id;
     }
 
-    public String getRol() {
-        return rol;
+    public String getRole() {
+        return role;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     // Link between user and user_rol entities
-    @ManyToOne (fetch = FetchType.LAZY, optional = false, targetEntity = UserModel.class)
+    @ManyToOne (fetch = FetchType.LAZY, optional = true, targetEntity = UserModel.class)
     @JoinColumn(name = "user_role_id", nullable = false)
     @JsonBackReference
     private UserModel user;
 
-    public UserRoleModel(UserModel user, String rol) {
+    public UserRoleModel(UserModel user, String role) {
         this.user = user;
-        this.rol = rol;
+        this.role = role;
+    }
+
+    public UserRoleModel() {
     }
 }

@@ -17,4 +17,9 @@ public class UserRoleService {
     public ArrayList<UserRoleModel> getAllRoles() {
         return (ArrayList<UserRoleModel>) userRoleRepository.findAll();
     }
+
+    // Method to save a new role
+    public UserRoleModel saveRole(UserRoleModel userRole) {
+        return userRoleRepository.save(userRole);
+    }
 }
