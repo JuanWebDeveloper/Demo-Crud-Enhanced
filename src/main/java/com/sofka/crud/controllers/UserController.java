@@ -44,6 +44,17 @@ public class UserController {
     public ArrayList<UserModel> getUsersByPriority(@PathVariable Integer priority) {
         return userService.getUsersByPriority(priority);
     }
- 
+    
+    // Method to update a user
+    @PutMapping("/{id}")
+    public Optional<UserModel> updateUser(@RequestBody UserModel user, @PathVariable Long id) {
+        boolean exists = userService.validateExistenceOfId(id); // Check if id exists
+        
+        if (exists) {
+            return userService.updateUser(user, id); // If the id exists, the user is updated
+        } else {
+            return Optional.empty(); // If the id does not exist, an empty optional is returned
+        }
+    }
 }
 

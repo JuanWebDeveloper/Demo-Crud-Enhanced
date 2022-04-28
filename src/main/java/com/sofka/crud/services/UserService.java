@@ -39,5 +39,11 @@ public class UserService {
         return (ArrayList<UserModel>) userRepository.findByPriority(priority);
     }
 
+    // Method to update a user
+    public Optional<UserModel> updateUser(UserModel user, Long id) {
+        user.setId(id);
+        return Optional.of(userRepository.save(user));
+    }
+
 }
 
