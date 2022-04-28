@@ -46,4 +46,22 @@ public class UserRoleController {
         userRole.setId(id);
         return userRoleService.updateRole(userRole);
     }
+
+    // Method to delete a role
+    @DeleteMapping("/{id}")
+    public String deleteRole(@PathVariable Long id) {
+        boolean exists = userRoleService.validateExistenceOfId(id); // Check if id exists
+
+        if (exists) {
+            boolean ok = userRoleService.deleteRole(id); // If the id exists, the user is deleted
+            
+            if (ok) {
+                return "Role with id " + id + " was deleted"; // If the user was deleted, a message is returned
+            } else {
+                return "Could not delete role with id " + id;
+            }
+        } else {
+            return "Role with id " + id + " does not exist"; // If the id does not exist, a message is returned
+        }
+    }
 }

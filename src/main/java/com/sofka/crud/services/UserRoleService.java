@@ -38,5 +38,14 @@ public class UserRoleService {
     public UserRoleModel updateRole(UserRoleModel userRole) {
         return userRoleRepository.save(userRole);
     }
-    
+
+    // Method to delete a role
+    public boolean deleteRole(long id) {
+        try {
+            userRoleRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }   
+    }
 }
