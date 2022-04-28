@@ -1,6 +1,7 @@
 package com.sofka.crud.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.sofka.crud.models.UserModel;
 import com.sofka.crud.repositories.UserRepository;
@@ -23,6 +24,15 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    // Method to validate if an id exists
+    public boolean validateExistenceOfId(Long id) {
+        return userRepository.existsById(id);
+    }
+
+    // Method to get a user by id
+    public Optional<UserModel> getUserById(Long id) {
+        return userRepository.findById(id);
+    }
 
 }
 
