@@ -56,5 +56,23 @@ public class UserController {
             return Optional.empty(); // If the id does not exist, an empty optional is returned
         }
     }
+
+    // Method to delete a user
+    @DeleteMapping("/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        boolean exists = userService.validateExistenceOfId(id); // Check if id exists
+
+        if (exists) {
+            boolean ok = userService.deleteUser(id); // If the id exists, the user is deleted
+            
+            if (ok) {
+                return "User with id " + id + " was deleted"; // If the user was deleted, a message is returned
+            } else {
+                return "Could not delete user with id " + id;
+            }
+        } else {
+            return "User with id " + id + " does not exist"; // If the id does not exist, a message is returned
+        }
+    }
 }
 

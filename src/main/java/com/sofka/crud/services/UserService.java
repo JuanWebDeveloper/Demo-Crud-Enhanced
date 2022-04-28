@@ -45,5 +45,14 @@ public class UserService {
         return Optional.of(userRepository.save(user));
     }
 
+    // Method to delete a user
+    public boolean deleteUser(Long id) {
+        try {
+            userRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    } 
 }
 
