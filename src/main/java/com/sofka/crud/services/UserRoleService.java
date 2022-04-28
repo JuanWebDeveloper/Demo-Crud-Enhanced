@@ -33,5 +33,10 @@ public class UserRoleService {
     public Optional<UserRoleModel> getRoleById(long id) {
         return userRoleRepository.findById(id);
     }
+
+    // Method to update a role
+    public UserRoleModel updateRole(UserRoleModel userRole) {
+        return userRoleRepository.save(userRole);
+    }
     
 }

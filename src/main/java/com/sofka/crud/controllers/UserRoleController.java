@@ -39,4 +39,11 @@ public class UserRoleController {
             return Optional.empty(); // If the id does not exist, an empty optional is returned
         }
     }
+
+    // Method to update a role
+    @PutMapping("/{id}")
+    public UserRoleModel updateRole(@RequestBody UserRoleModel userRole, @PathVariable Long id) {
+        userRole.setId(id);
+        return userRoleService.updateRole(userRole);
+    }
 }
