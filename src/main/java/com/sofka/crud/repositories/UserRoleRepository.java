@@ -1,11 +1,11 @@
 package com.sofka.crud.repositories;
 
-import com.sofka.crud.models.UserRolModel;
+import com.sofka.crud.models.UserRoleModel;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRolRepository extends CrudRepository<UserRolModel, Long> {
+public interface UserRoleRepository extends CrudRepository<UserRoleModel, Long> {
     
 }

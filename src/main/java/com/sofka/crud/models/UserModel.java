@@ -1,6 +1,9 @@
 package com.sofka.crud.models;
 
+import java.util.List;
+
 import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "user")
@@ -42,6 +45,17 @@ public class UserModel {
     }
     
     public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
+    // Link between user and user_rol entities
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user", cascade = CascadeType.REMOVE, targetEntity = UserRoleModel.class)
+    @JsonManagedReference
+    private List<UserRoleModel> UserRoleModel;
+
+    public UserModel(String name, String email, Integer priority) {
+        this.name = name;
+        this.email = email;
         this.priority = priority;
     }
 }
