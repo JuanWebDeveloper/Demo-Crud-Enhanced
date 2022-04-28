@@ -1,6 +1,7 @@
 package com.sofka.crud.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.sofka.crud.models.UserRoleModel;
 import com.sofka.crud.repositories.UserRoleRepository;
@@ -22,4 +23,15 @@ public class UserRoleService {
     public UserRoleModel saveRole(UserRoleModel userRole) {
         return userRoleRepository.save(userRole);
     }
+
+    // Method to validate if an id exists
+    public boolean validateExistenceOfId(Long id) {
+        return userRoleRepository.existsById(id);
+    }
+
+    // Method to get a role by id
+    public Optional<UserRoleModel> getRoleById(long id) {
+        return userRoleRepository.findById(id);
+    }
+    
 }
