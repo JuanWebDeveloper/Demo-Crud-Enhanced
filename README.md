@@ -24,44 +24,44 @@ Next, some screenshots were attached to this document where the correct function
 
 ## Request to bring all users
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/getAllUsers.png)
+![Request to bring all users](./image/getAllUsers.png)
 
 ## Request to create users
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/createUsers.png)
+![Request to create users](./image/createUsers.png)
 
 ## Request to get user by id
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/getUserById.png)
+![Request to get user by id](./image/getUserById.png)
 
 ## Request to get user by priority
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/getUserByPriority.png)
+![Request to get user by priority](./image/getUserByPriority.png)
 
 ## Request to update users
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/updatedUser.png)
+![Request to update users](./image/updatedUser.png)
 
 ## Request to delete users
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/deletedUser.png)
+![Request to delete users.](./image/deletedUser.png)
 
 ## Request to bring all roles
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/getAllRoles.png)
+![Request to bring all roles](./image/getAllRoles.png)
 
 ## Request to create role
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/createRoles.png)
+![Request to create role](./image/createRoles.png)
 
 ## Request to get role by id
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/getRoleById.png)
+![Request to get role by id](./image/getRoleById.png)
 
 ## Request to update roles
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/updatedRole.png)
+![Request to update roles](./image/updatedRole.png)
 
 ## Request to delete roles
 
-![preview web app.](https://github.com/JuanWebDeveloper/Demo-Crud-Enhanced/tree/master/image/deletedRole.png)
+![Request to delete roles](./image/deletedRole.png)
